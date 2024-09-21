@@ -65,5 +65,11 @@ Ahora si para utilizarlo se necesita hacer el controller que esta aqui:
 
 ![alt text](image-16.png)
 
-Con ello deberia bastar segun la logica de la implementacion, vamos a probar el comando de spring boot:
+Primero hacemos package para ver si funciona jacoco y todo lo demas
 
+
+Con ello deberia bastar segun la logica de la implementacion, vamos a probar el comando de spring boot, habiendolo probado veo que no compila del todo por un error de configuracion pero ya me quede sin tiempo.
+
+![alt text](image-17.png)
+
+Lo hago y no me sale la carpeta de jacoco, me sale todo menos el site y no se por que, sin embargo probando con el exec veo que funcionan los agentes, al cambiar el estado de las cantidades ambos reportan, pero no me da tiempo de mostrar el jacoco.
