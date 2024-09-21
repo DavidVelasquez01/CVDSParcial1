@@ -1,5 +1,10 @@
 package edu.eci.cvds.CVDSParcial1.model;
 
+import java.util.ArrayList;
+
+import main.java.edu.eci.cvds.CVDSParcial1.observers.AGENTE;
+import main.java.edu.eci.cvds.CVDSParcial1.observers.AGENTE_ADVERTENCIA;
+import main.java.edu.eci.cvds.CVDSParcial1.observers.AGENTE_LOG;
 
 public class Product {
 
@@ -7,6 +12,20 @@ public class Product {
     private float precio;
     private int cantidad;
     private String categoria;
+    private ArrayList<AGENTE> agentes;
+
+    public Product () {
+        this.agentes = new ArrayList<AGENTE>();
+        this.agentes.add(new AGENTE_ADVERTENCIA());
+        this.agentes.add(new AGENTE_LOG());
+
+    }
+
+    public void notificarAgentes(){
+        for (int i=0;i<agentes.size();i++){
+            agentes.get(i).update(this);
+        }
+    }
 
     public String getNombre() {
         return nombre;
@@ -22,6 +41,7 @@ public class Product {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+        this.notificarAgentes();
     }
 
     public float getPrecio() {
