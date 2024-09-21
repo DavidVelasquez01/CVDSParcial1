@@ -61,4 +61,9 @@ Y aqui llamamos esos metodos
 ![alt text](image-15.png)
 
 
-Ahora si para utilizarlo se necesita hacer
+Ahora si para utilizarlo se necesita hacer el controller que esta aqui:
+
+![alt text](image-16.png)
+
+Con ello deberia bastar segun la logica de la implementacion, vamos a probar el comando de spring boot:
+

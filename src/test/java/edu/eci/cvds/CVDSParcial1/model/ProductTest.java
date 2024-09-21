@@ -33,7 +33,7 @@ public class ProductTest {
   @Test
   public void testGetAndSetPrecioProducto() {
     Product product = new Product();
-    product.setPrecio(3.5);
+    product.setPrecio(Float.parseFloat(3.5));
     assertEquals(3.5, product.getPrecio());
   }
 }

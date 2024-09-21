@@ -11,15 +11,15 @@ public class ProductRepository {
         productos = new HashMap<String, Product>();
     }
 
-    public addProduct(Product product){
+    public void addProduct(Product product){
         this.productos.put(product.getNombre(), product);
     }
 
-    public editProduct(String nombreP, Product product){
+    public void editProduct(String nombreP, Product product){
         this.productos.replace(nombreP, product);
     }
 
-    public HashMap<String,Product> getProducto(String nombre){
+    public Product getProducto(String nombre){
         return this.productos.get(nombre);
     }
 }

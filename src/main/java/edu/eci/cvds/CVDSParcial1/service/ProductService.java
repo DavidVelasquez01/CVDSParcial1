@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import main.java.edu.eci.cvds.CVDSParcial1.repository.ProductRepository;
 import netscape.javascript.JSObject;
+import edu.eci.cvds.CVDSParcial1.model.Product;
 
 
 @Service

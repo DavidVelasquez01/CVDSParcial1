@@ -6,7 +6,7 @@ public class AGENTE_ADVERTENCIA implements AGENTE{
 
     public void update(Product prod) {
         if(prod.getCantidad()<5){
-            System.out.println("ALERTA!!! El stock del Producto: "+prod.getNombre()+" es muy bajo, solo quedan "+((String)prod.getCantidad())+" unidades.");
+            System.out.println("ALERTA!!! El stock del Producto: "+prod.getNombre()+" es muy bajo, solo quedan "+  String.valueOf(prod.getCantidad())+" unidades.");
         }
     }
 }

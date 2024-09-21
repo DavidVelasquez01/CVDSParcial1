@@ -29,9 +29,9 @@ public class ProductController {
 
   @PutMapping("/{nombre}/{caso}/{valor}")
   public String updateProduct(@PathVariable String nombre, @PathVariable String caso, @PathVariable String valor) {
-    
+    Product producto;
     try{
-        Product producto = this.productService.getRepo().getProducto(nombre);
+        producto = this.productService.getRepo().getProducto(nombre);
     }catch (Exception e){
         return "Hubo un error, revise los parametros.";
     }
@@ -43,7 +43,7 @@ public class ProductController {
             break;
         
         case "cant":
-        producto.setCantidad((int) valor);
+        producto.setCantidad(Integer.parseInt(valor));
      
         break;
         case "cat":
@@ -51,13 +51,13 @@ public class ProductController {
       
         break;
         case "prec":
-        producto.setPrecio((float) valor);
+        producto.setPrecio(Float.parseFloat(valor));
      
         break;
 
         default:
             return "Hubo un error, revise los casos nom, cant, cat o prec";
-            break;
+          
     }
 
 
